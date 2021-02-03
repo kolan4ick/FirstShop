@@ -1,0 +1,18 @@
+<div class="col-12 col-md-6 col-lg-4 px-2">
+  <div class="card card-product">
+    <%= link_to @product do %>
+      <%= image_tag @product.avatar, class: "card-img-top", alt: @product.title %>
+      <div class="card-body">
+        <h5 class="card-title"> <%= @product.title %></h5>
+    <% end %>
+    <p class="card-text"><%= @product.description %></p>
+    </div>
+    <div class="card-body">
+      <div class="">
+        <%= @product.price %>
+      </div>
+      <%= link_to "Show", @product, class: "card-link" %>
+      <a href="#" class="card-link">add to card</a>
+    </div>
+  </div>
+</div>

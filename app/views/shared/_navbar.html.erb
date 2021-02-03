@@ -3,25 +3,30 @@
     <a class="navbar-brand" href="<%= root_path %>">
       FirstShop
     </a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="<%= products_path %>"> Products </a>
+      </li>
+    </ul>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-<!--    <div class="collapse navbar-collapse" id="navbarText">-->
-<!--      <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link" href="<%#= product_path %>"><%#= t("navbar.events") %></a>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--      <div class="dropdown language" style="padding:5px 10px 0px 4px">-->
-<!--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLocale" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-          <%#= t(get_locale).upcase %>
-<!--        </button>-->
-<!--        <div class="dropdown-menu" aria-labelledby="dropdownMenuLocale">-->
-          <%# I18n.available_locales.each do |locale| %>
-            <%#= link_to(t(locale).upcase, request.params.merge( locale: locale ), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
-          <%# end %>
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
+    <!--    <div class="collapse navbar-collapse" id="navbarText">-->
+    <!--      <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+    <!--        <li class="nav-item">-->
+    <!--          <a class="nav-link" href="<%#= product_path %>"><%#= t("navbar.events") %></a>-->
+    <!--        </li>-->
+    <!--      </ul>-->
+    <!--      <div class="dropdown language" style="padding:5px 10px 0px 4px">-->
+    <!--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLocale" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+    <%#= t(get_locale).upcase %>
+    <!--        </button>-->
+    <!--        <div class="dropdown-menu" aria-labelledby="dropdownMenuLocale">-->
+    <%# I18n.available_locales.each do |locale| %>
+    <%#= link_to(t(locale).upcase, request.params.merge( locale: locale ), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
+    <%# end %>
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </nav>

@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+30.times do
+  product = Product.create({
+                             title: Faker::Food.dish,
+                             description: Faker::Food.description,
+                             price: rand(100)
+                           })
+  product.avatar.attach(io: URI.open('https://picsum.photos/300'), filename: "#{product.title}.jpg",
+                       content_type: 'image/jpg')
+end
