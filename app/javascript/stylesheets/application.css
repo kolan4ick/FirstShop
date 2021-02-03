@@ -1,1 +1,18 @@
 @import "bootstrap";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-size: large;
+    width: 100%;
+    height: 27px;
+}
