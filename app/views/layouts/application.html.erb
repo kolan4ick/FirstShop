@@ -9,11 +9,14 @@
   <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-<body>
+<body id="mainBody">
 <%= render 'shared/navbar' %>
 <div class="container pt-4">
   <%= yield %>
 </div>
+<script type="text/javascript" charset="utf-8">
+    blackAndWhite();
+</script>
 </body>
 <%= render "shared/footer" %>
 </html>
