@@ -1,5 +1,15 @@
 @import "bootstrap";
 
+.dark {
+    background-color: rgb(33,37,41);
+}
+.dark .customBody{
+    background-color: rgb(33,37,41);
+    color: white;
+}
+.dark .customText{
+    color: white
+}
 .card-bottom {
     display: flex;
     align-items: flex-end;
