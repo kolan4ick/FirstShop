@@ -1,22 +1,31 @@
-<div class="col-12 col-md-6 col-lg-4 px-2">
+<div class="col-12 col-md-6 col-lg-4 px-2" style="padding-top: 1vh" id="product_<%= @cart_product.product_id %>">
   <div class="card border-secondary card-product-cart customBody">
-    <%= link_to @product.product do %>
-      <%= image_tag @product.product.avatar, class: "card-img-top", alt: @product.product.title %>
+    <%= link_to @cart_product.product do %>
+      <%= image_tag @cart_product.product.avatar, class: "card-img-top", alt: @cart_product.product.title %>
       <div class="card-body">
-        <h5 class="card-title"> <%= @product.product.title %></h5>
+        <h5 class="card-title">
+          <% if @cart_product.product.title.size > 15 %>
+            <%= @cart_product.product.title.first(15)... %>
+          <% else %>
+            <%= @cart_product.product.title %>
+          <% end %></h5>
     <% end %>
     <p class="card-text">
-      <% if @product.product.description.size > 50 %>
-        <%= @product.product.description.first(50)... %>
+      <% if @cart_product.product.description.size > 45 %>
+        <%= @cart_product.product.description.first(45)... %>
       <% else %>
-        <%= @product.product.description %>
+        <%= @cart_product.product.description %>
       <% end %>
     </p>
     </div>
-    <div class="card-bottom">
-      count: <%= @product.count %> <br>
+    <div class="card-bottom-cart">
+      count: <%= number_field_tag :count, @cart_product.count, onchange: "cart_product_change_count(#{@cart_product.product_id},this.value), cart_product_change_price(#{@cart_product.product_id},#{@cart_product.product.price} * this.value, this.value)" %>
       total price:
-      <%= @product.product.price * @product.count %>
+      <div id="price_<%= @cart_product.product_id %>">
+        <%= @cart_product.product.price * @cart_product.count %>
+      </div>
+      <div class="btn btn-danger card-link" onclick="remove_from_cart(<%=@cart_product.product_id%>)">remove from card
+      </div>
     </div>
   </div>
 </div>
