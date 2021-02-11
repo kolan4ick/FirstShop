@@ -9,6 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
 import {blackAndWhite} from "./custom"
+import {add_to_cart, show_cart} from "./cart"
 import "../stylesheets/application"
 
 Rails.start()
@@ -16,3 +17,5 @@ Turbolinks.start()
 ActiveStorage.start()
 
 window.blackAndWhite = blackAndWhite
+window.add_to_cart = add_to_cart
+window.show_cart = show_cart

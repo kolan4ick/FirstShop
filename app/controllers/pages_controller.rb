@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
   def index
-    def index
-      @products = Product.limit(8)
-    end
+    @products = Product.limit(6).with_attached_avatar
   end
 end

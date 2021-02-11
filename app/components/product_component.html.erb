@@ -1,5 +1,5 @@
 <div class="col-12 col-md-6 col-lg-4 px-2">
-  <div class="card card-product customBody">
+  <div class="card border-secondary card-product customBody">
     <%= link_to @product do %>
       <%= image_tag @product.avatar, class: "card-img-top", alt: @product.title %>
       <div class="card-body">
@@ -14,9 +14,8 @@
     </p>
     </div>
     <div class="card-bottom">
+      price:
       <%= @product.price %>
-      <%= link_to "Show", @product, class: "card-link" %>
-      <a href="#" class="card-link">add to card</a>
-    </div>
+      <a href="#" class="card-link" onclick="add_to_cart(<%=@product.id%>)">add to card</a></div>
   </div>
 </div>

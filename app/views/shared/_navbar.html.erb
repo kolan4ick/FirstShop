@@ -16,7 +16,7 @@
         </ol>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/cookiesjs/1.4.2/cookies.min.js"></script>
         <script type="text/javascript">
-            (function() {
+            (function () {
                 'use strict';
                 var cn = 'CheckBoxes', set = {}, cook = cookies(cn) || {};
                 cookies.expires = 10 * 24 * 3600;
@@ -29,7 +29,7 @@
                     cookies(set);
                 }
 
-                document.querySelectorAll('#ch input[type=checkbox]').forEach(function(i) {
+                document.querySelectorAll('#ch input[type=checkbox]').forEach(function (i) {
                     i.onchange = saveChecked;
                     // Устанавливаем значение из кукиса
                     i.checked = !!cook[i.id];
@@ -42,22 +42,24 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!--    <div class="collapse navbar-collapse" id="navbarText">-->
-    <!--      <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-    <!--        <li class="nav-item">-->
-    <!--          <a class="nav-link" href="<%#= product_path %>"><%#= t("navbar.events") %></a>-->
-    <!--        </li>-->
-    <!--      </ul>-->
-    <!--      <div class="dropdown language" style="padding:5px 10px 0px 4px">-->
-    <!--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLocale" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-    <%#= t(get_locale).upcase %>
-    <!--        </button>-->
-    <!--        <div class="dropdown-menu" aria-labelledby="dropdownMenuLocale">-->
-    <%# I18n.available_locales.each do |locale| %>
-    <%#= link_to(t(locale).upcase, request.params.merge( locale: locale ), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
-    <%# end %>
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
+    <span class="navbar-text">
+        <span id="cart" onclick="show_cart()">Кошик</span>
+      </span>
   </div>
 </nav>
+<div class="modal fade bd-example-modal-lg" id="cart_modal" tabindex="-1" aria-labelledby="cart_modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content modal-dialog-scrollable">
+      <div class="modal-header">
+        <h5 class="modal-title customText" id="cart_modalLabel">Modal title</h5>
+        <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row" id="cart_body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <%#= link_to "Order", new_order_path,class:"btn btn-succsess"%>
+      </div>
+    </div>
+  </div>
+</div>
