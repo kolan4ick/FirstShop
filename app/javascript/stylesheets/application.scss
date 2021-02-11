@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import "toastr";
 .dark {
   background-color: rgb(33, 37, 41);
 }
@@ -42,15 +42,18 @@
   padding: 15px;
   border-top: 1px solid #ccc;
 }
-
+.card-bottom-cart {
+  border-top: 1px solid #ccc;
+  padding: 5px;
+}
 .card-product {
-  min-height: 636px;
-  max-height: 636px;
+  min-height: 70vh;
+  max-height: 90vh;
 }
 
 .card-product-cart {
-  min-height: 462px;
-  max-height: 462px;
+  min-height: 55vh;
+  max-height: 90vh;
 }
 
 .product {
