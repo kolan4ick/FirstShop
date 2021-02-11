@@ -1,0 +1,154 @@
+@import "bootstrap";
+
+.dark {
+  background-color: rgb(33, 37, 41);
+}
+
+.dark .navbar {
+  border-bottom: 1px solid #393f47;
+}
+
+.border-secondary {
+  border: 1px solid #cccccc;
+}
+
+.dark .customBody {
+  background-color: rgb(33, 37, 41);
+  color: white;
+}
+
+.dark .modal-header {
+  border-bottom: 1px solid #393f47;
+}
+
+.dark .modal-footer {
+  border-top: 1px solid #393f47;
+}
+
+.dark .customText {
+  color: white
+}
+
+.dark .modal-content {
+  background-color: rgb(33, 37, 41);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.card-product {
+  min-height: 636px;
+  max-height: 636px;
+}
+
+.card-product-cart {
+  min-height: 462px;
+  max-height: 462px;
+}
+
+.product {
+
+  img {
+    max-height: 50vh;
+  }
+
+  .title {
+    color: red;
+  }
+
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-size: large;
+  width: 100%;
+  height: 27px;
+}
+
+/*Style for toggles*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #585B5B;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #474848;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #474848;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#cart {
+  &:hover {
+    color: white;
+    border: 1px solid blue;
+    cursor: pointer;
+  }
+}
