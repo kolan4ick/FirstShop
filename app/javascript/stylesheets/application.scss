@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "toastr";
+
 .dark {
   background-color: rgb(33, 37, 41);
 }
@@ -28,6 +29,13 @@
 .dark .customText {
   color: white
 }
+.form-control {
+  resize: none;
+}
+.dark .form-control {
+  color: white;
+  background: #393f47;
+}
 
 .dark .modal-content {
   background-color: rgb(33, 37, 41);
@@ -42,10 +50,12 @@
   padding: 15px;
   border-top: 1px solid #ccc;
 }
+
 .card-bottom-cart {
   border-top: 1px solid #ccc;
   padding: 5px;
 }
+
 .card-product {
   min-height: 70vh;
   max-height: 90vh;
